@@ -5,6 +5,7 @@ import PageTitle from "../components/common/PageTitle";
 import Editor from "../components/add-new-post/Editor";
 import SidebarActions from "../components/add-new-post/SidebarActions";
 import SidebarCategories from "../components/add-new-post/SidebarCategories";
+import Chatbot from "../components/add-new-post/Chatbot";
 
 const AddNewPost = () => (
   <Container fluid className="main-content-container px-4 pb-4">
@@ -16,7 +17,8 @@ const AddNewPost = () => (
     <Row>
       {/* Editor */}
       <Col lg="9" md="12">
-        <Editor />
+        <Chatbot />
+        
       </Col>
 
       {/* Sidebar Widgets */}
