@@ -9,6 +9,7 @@ import UsersByDevice from "./../components/blog/UsersByDevice";
 import NewDraft from "./../components/blog/NewDraft";
 import Discussions from "./../components/blog/Discussions";
 import TopReferrals from "./../components/common/TopReferrals";
+import Stockdata from "./../components/stock-data/Stockdata.js"
 
 const BlogOverview = ({ smallStats }) => (
   <Container fluid className="main-content-container px-4">
@@ -37,6 +38,7 @@ const BlogOverview = ({ smallStats }) => (
     </Row>
 
     <Row>
+      <Stockdata />
       {/* Users Overview */}
       <Col lg="8" md="12" sm="12" className="mb-4">
         <UsersOverview />
