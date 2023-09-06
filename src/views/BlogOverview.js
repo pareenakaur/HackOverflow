@@ -14,7 +14,7 @@ const BlogOverview = ({ smallStats }) => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
-      <PageTitle title="Blog Overview" subtitle="Dashboard" className="text-sm-left mb-3" />
+      <PageTitle title="Portfolio Overview" subtitle="Dashboard" className="text-sm-left mb-3" />
     </Row>
 
     {/* Small Stats Blocks */}
@@ -75,9 +75,9 @@ BlogOverview.propTypes = {
 BlogOverview.defaultProps = {
   smallStats: [
     {
-      label: "Posts",
-      value: "2,390",
-      percentage: "4.7%",
+      label: "Current Value",
+      value: "4,496.83",
+      percentage: "1.45%",
       increase: true,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
@@ -93,9 +93,9 @@ BlogOverview.defaultProps = {
       ]
     },
     {
-      label: "Pages",
-      value: "182",
-      percentage: "12.4",
+      label: "Risk Assement",
+      value: "23%",
+      percentage: "3.4%",
       increase: true,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
