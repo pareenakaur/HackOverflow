@@ -28,7 +28,7 @@ llm = OpenAI(temperature=0.1, verbose=True)
 embeddings = OpenAIEmbeddings()
 
 # Create and load PDF Loader
-loader = PyPDFLoader('annualreport.pdf')
+loader = PyPDFLoader('NASDAQ_AAPL_2022.pdf')
 # Split pages from pdf 
 pages = loader.load_and_split()
 # Load documents into vector database aka ChromaDB
@@ -37,7 +37,7 @@ store = Chroma.from_documents(pages, embeddings, collection_name='annualreport')
 # Create vectorstore info object - metadata repo?
 vectorstore_info = VectorStoreInfo(
     name="annual_report",
-    description="a banking annual report as a pdf",
+    description="Apple's annual report as a pdf",
     vectorstore=store
 )
 # Convert the document store into a langchain toolkit

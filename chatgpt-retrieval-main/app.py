@@ -7,7 +7,7 @@ from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain 
 from langchain.memory import ConversationBufferMemory
-from langchain.utilities import WikipediaAPIWrapper 
+from langchain.utilities import WikipediaAPIWrapper
 import wikipedia
 
 os.environ['OPENAI_API_KEY'] = apikey
@@ -41,6 +41,7 @@ script_memory = ConversationBufferMemory(input_key='wikipedia_research', memory_
 
 # Llms
 llm = OpenAI(temperature=0.8, presence_penalty=0.2, frequency_penalty= 0.2, max_tokens=1000) 
+
 input_chain = LLMChain(llm=llm, prompt=input_template, verbose=True, output_key='input_chain_output')
 output_chain = LLMChain(llm=llm, prompt=script_template, verbose=True, output_key='output_chain_output')
 
