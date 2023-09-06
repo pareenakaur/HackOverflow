@@ -12,19 +12,21 @@ from langchain.utilities import WikipediaAPIWrapper
 os.environ['OPENAI_API_KEY'] = apikey
 
 # App framework
-st.title('🦜🔗 YouTube GPT Creator')
+st.title('Risk Analysis Generator')
 prompt = st.text_input('Plug in your prompt here') 
 
 
 # Prompt templates
 input_template = PromptTemplate(
     input_variables = ['event', 'portfolio'], 
-    template='Your task is to write a financial risk analysis of how {event} affects the risk rating of a portfolio with asset weightages of {portfolio}.'
+    template='Your role is to act as a risk analyst, writing a detailed quantitative risk analysis \
+    for an asset manager about how {event} affects the \
+    risk rating of their portfolio with {portfolio} asset weightages.'
 )
 
 script_template = PromptTemplate(
     input_variables = ['wikipedia_research'], 
-    template='Using the following wikipedia research:{wikipedia_research}'
+    template='Using the following wikipedia research:{wikipedia_research}, my analysis is:'
 )
 
 
