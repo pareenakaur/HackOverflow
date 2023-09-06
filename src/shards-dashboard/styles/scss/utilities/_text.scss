@@ -11,9 +11,11 @@
 // Light text adjustments
 .text-light {
   color: $text-light-color !important;
+  white-space: pre-wrap;
 }
 
 // Semibold text
 .text-semibold {
   font-weight: $text-semibold-font-weight;
+  white-space: pre-wrap;
 }

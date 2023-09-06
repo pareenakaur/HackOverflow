@@ -22,80 +22,86 @@ class BlogPosts extends React.Component {
       // First list of posts.
       PostsListOne: [
         {
-          backgroundImage: require("../images/content-management/1.jpeg"),
-          category: "Business",
-          categoryTheme: "dark",
+          backgroundImage: require("../images/content-management/apple.png"),
+          category: "Market Risk",
+          categoryTheme: "gold",
           author: "Anna Kunis",
-          authorAvatar: require("../images/avatars/1.jpg"),
-          title: "Conduct at an replied removal an amongst",
-          body:
-            "However venture pursuit he am mr cordial. Forming musical am hearing studied be luckily. But in for determine what would see...",
-          date: "28 February 2019"
+          authorAvatar: require("../images/avatars/apple.png"),
+          title: "Apple reportedly tests 3D printing to manufacture the new Apple Watch",
+          body: `Apple, a global technology giant, is considering the adoption of 3D printing technology in the manufacturing of its next-generation Apple Watch. This decision stems from a drive to enhance production efficiency and potentially reduce costs. The company is currently in the testing phase, evaluating the feasibility and scalability of 3D printing in its manufacturing processes.\n\nNews of Apple's technology adoption can significantly influence market sentiment and impact the company's stock price. Positive sentiment can lead to increased investor confidence`,
+          date: "31 August 2023"
         },
         {
-          backgroundImage: require("../images/content-management/2.jpeg"),
-          category: "Travel",
-          categoryTheme: "info",
-          author: "James Jamerson",
-          authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Off tears are day blind smile alone had ready",
-          body:
-            "Is at purse tried jokes china ready decay an. Small its shy way had woody downs power. To denoting admitted speaking learning my...",
-          date: "29 February 2019"
-        },
-        {
-          backgroundImage: require("../images/content-management/3.jpeg"),
-          category: "Technology",
-          categoryTheme: "royal-blue",
-          author: "Jimmy Jackson",
-          authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Difficult in delivered extensive at direction",
-          body:
-            "Is at purse tried jokes china ready decay an. Small its shy way had woody downs power. To denoting admitted speaking learning my...",
-          date: "29 February 2019"
-        },
-        {
-          backgroundImage: require("../images/content-management/4.jpeg"),
-          category: "Business",
+          backgroundImage: require("../images/content-management/cococola.png"),
+          category: "Liquidity Risk",
           categoryTheme: "warning",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "It so numerous if he may outlived disposal",
+          author: "Amelia Lucas",
+          authorAvatar: require("../images/avatars/cococola_av.png"),
+          title: "Coca Cola says its done raising prices in the US and Europe this year",
           body:
-            "How but sons mrs lady when. Her especially are unpleasant out alteration continuing unreserved ready road market resolution...",
-          date: "29 February 2019"
+            `Coca-Cola, a global beverage giant, has recently announced a strategic decision that has garnered attention in both financial and consumer circles. The company has declared its intention not to raise prices on its products in the United States and Europe for the remainder of the year.\n\nCoca-Cola operates in an intensely competitive market, where consumer preferences, economic factors, and industry rivals continually influence business strategies. The decision not to increase prices comes amidst a backdrop of economic uncertainties and shifting consumer behaviors.\n\nIf Coca-Cola has significant short-term debt obligations, maintaining profitability and cash flow is crucial to meet debt service requirements. A pricing strategy that squeezes profit margins may affect the company's ability to service its debt, potentially leading to liquidity challenges.
+            `,
+          date: "26 July 2023"
+        },
+        {
+          backgroundImage: require("../images/content-management/morgan-stanley.png"),
+          category: "Credit Risk",
+          categoryTheme: "dark",
+          author: "Lee Ying Shan",
+          authorAvatar: require("../images/avatars/morgan-stanley_av.png"),
+          
+          title: " Morgan Stanley says China is ‘overinvested,’ but India’s the opposite",
+          body:
+            `Morgan Stanley, a prominent global financial institution, has drawn attention to an intriguing contrast in its recent analysis of two of the world's most significant emerging markets: China and India. \n\nThe report suggests that China may be facing concerns of overinvestment, while India, on the other hand, is perceived as underinvested in terms of its economic potential.This observation reflects a complex interplay of economic, financial, and geopolitical factors shaping the investment landscape in these countries.\n\nThe underinvestment risk associated with India refers to the untapped potential and opportunities for investment in various sectors like technology, healthcare, and renewable energy. While there are growth prospects, investing in emerging markets like India carries its own set of risks, including regulatory, operational, and market risks
+            `,
+          date: "5 September 2023"
+        },
+        {
+          backgroundImage: require("../images/content-management/disney.png"),
+          category: "Strategic Risk",
+          categoryTheme: "info",
+          author: "Jeff Marks",
+          authorAvatar: require("../images/avatars/disney_av.png"),
+          title: "Club name Disney’s dispute with Charter is bad news for both companies",
+          body:
+            `Disney's ongoing dispute with Charter Communications has emerged as a significant development with potential repercussions for both companies. The clash between these entertainment giants revolves around content distribution and pricing, shedding light on the challenges and complexities of the modern media landscape.\n\nDisney is navigating a transition from traditional cable distribution to its streaming platform, Disney+. While it seeks to maximize the value of its content portfolio, disruptions in traditional distribution agreements could affect short-term revenue and profitability. Disney may need to ensure that its streaming service is robust and attractive enough to offset any losses from traditional distribution.
+            `,
+          date: "5 September 2023"
         }
+
+        
       ],
 
       // Second list of posts.
       PostsListTwo: [
         {
-          backgroundImage: require("../images/content-management/5.jpeg"),
-          category: "Travel",
-          categoryTheme: "info",
-          author: "Anna Ken",
-          authorAvatar: require("../images/avatars/0.jpg"),
+          backgroundImage: require("../images/content-management/tesla.png"),
+          category: "Market Risk",
+          categoryTheme: "gold",
+          author: "Lora Kolodny",
+          authorAvatar: require("../images/avatars/tesla-av.png"),
           title:
-            "Attention he extremity unwilling on otherwise cars backwards yet",
+            "Tesla shares close down 5% after price cuts, Model 3 refresh",
           body:
-            "Conviction up partiality as delightful is discovered. Yet jennings resolved disposed exertion you off. Left did fond drew fat head poor jet pan flying over...",
-          date: "29 February 2019"
+            `In a dynamic turn of events, Tesla, the electric vehicle (EV) pioneer, experienced a significant decline in its stock price, with shares closing down by 5% following a series of developments. These developments include a strategic decision to reduce the prices of its electric cars and the announcement of a Model 3 refresh. This story offers insight into the ever-evolving landscape of the electric vehicle market and its implications for Tesla and its investors.\n\nTesla's stock price movements are often influenced by investor sentiment and expectations. Negative sentiment or concerns about the impact of pricing decisions can affect the stock's performance.
+            `,
+          date: "1 September 2023"
         },
         {
-          backgroundImage: require("../images/content-management/6.jpeg"),
-          category: "Business",
-          categoryTheme: "dark",
-          author: "John James",
-          authorAvatar: require("../images/avatars/1.jpg"),
+          backgroundImage: require("../images/content-management/arm.png"),
+          category: "Market Risk",
+          categoryTheme: "royal-blue",
+          author: "Jordan Novet",
+          authorAvatar: require("../images/avatars/arm-av.png"),
           title:
-            "Totally words widow one downs few age every seven if miss part by fact",
+            "Apple, Google, Nvidia and other tech giants are considering buying Arm shares",
           body:
-            "Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. Unwilling departure education to admitted speaking...",
-          date: "29 February 2019"
+            `In a noteworthy development that could reshape the landscape of the semiconductor industry, several tech giants, including Apple, Google, and Nvidia, have expressed their willingness to explore the possibility of acquiring shares in Arm Limited. This news has sent ripples throughout the technology sector, with implications for the future of chip design, innovation, and competition.\n\nArm Limited, a British semiconductor and software design company, holds a pivotal role in the global technology ecosystem. It licenses its chip architecture and designs to a wide range of manufacturers, enabling the production of a vast array of devices, from smartphones to servers. The Arm architecture underpins the majority of the world's mobile devices, making it a linchpin of the tech industry.\n\nTechnology and Innovation Risk: Ownership and control of Arm Limited by major tech players could influence the direction of chip design and innovation. While it offers opportunities for innovation, it also introduces risks if strategic decisions do not align with industry trends or customer demands.`,
+          date: "5 September 2023"
         }
       ],
 
-      // Third list of posts.
+      //REMOVE THIRD AND FOURTH
       PostsListThree: [
         {
           author: "John James",
@@ -267,75 +273,7 @@ class BlogPosts extends React.Component {
           ))}
         </Row>
 
-        {/* Third Row of Posts */}
-        <Row>
-          {PostsListThree.map((post, idx) => (
-            <Col lg="4" key={idx}>
-              <Card small className="card-post mb-4">
-                <CardBody>
-                  <h5 className="card-title">{post.title}</h5>
-                  <p className="card-text text-muted">{post.body}</p>
-                </CardBody>
-                <CardFooter className="border-top d-flex">
-                  <div className="card-post__author d-flex">
-                    <a
-                      href="#"
-                      className="card-post__author-avatar card-post__author-avatar--small"
-                      style={{ backgroundImage: `url('${post.authorAvatar}')` }}
-                    >
-                      Written by James Khan
-                    </a>
-                    <div className="d-flex flex-column justify-content-center ml-3">
-                      <span className="card-post__author-name">
-                        {post.author}
-                      </span>
-                      <small className="text-muted">{post.date}</small>
-                    </div>
-                  </div>
-                  <div className="my-auto ml-auto">
-                    <Button size="sm" theme="white">
-                      <i className="far fa-bookmark mr-1" /> Bookmark
-                    </Button>
-                  </div>
-                </CardFooter>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-
-        {/* Fourth Row of posts */}
-        <Row>
-          {PostsListFour.map((post, idx) => (
-            <Col lg="3" md="6" sm="12" className="mb-4" key={idx}>
-              <Card small className="card-post h-100">
-                <div
-                  className="card-post__image"
-                  style={{ backgroundImage: `url('${post.backgroundImage}')` }}
-                />
-                <CardBody>
-                  <h5 className="card-title">
-                    <a className="text-fiord-blue" href="#">
-                      {post.title}
-                    </a>
-                  </h5>
-                  <p className="card-text">{post.body}</p>
-                </CardBody>
-                <CardFooter className="text-muted border-top py-3">
-                  <span className="d-inline-block">
-                    By
-                    <a className="text-fiord-blue" href={post.authorUrl}>
-                      {post.author}
-                    </a>{" "}
-                    in
-                    <a className="text-fiord-blue" href={post.categoryUrl}>
-                      {post.category}
-                    </a>
-                  </span>
-                </CardFooter>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        
       </Container>
     );
   }
