@@ -20,7 +20,7 @@ prompt = st.text_input('Plug in your prompt here')
 # Prompt templates
 input_template = PromptTemplate(
     input_variables = ['event', 'event_research'], 
-    template='Your role is to act as a financial macro-economics researcher. Write a summary of how {event} could \
+    template='Your role is to act as a financial macro-economics researcher. Reply with an estimate of how the news headline:[{event}] could \
     affect financial markets or any investment classes, keeping your response below 100 words. \
     For more context on this event, refer to the following research: {event_research}'
 )
@@ -29,9 +29,9 @@ script_template = PromptTemplate(
     input_variables = ['input_chain_output', 'portfolio', 'portfolio_research'], 
     template='Your role is to act as a risk analyst. You are given the following \
     market information, {input_chain_output}. Write a detailed quantitative risk analysis \
-    for how that affects the risk rating of a stock portfolio, {portfolio}. \
-    Keep your response below 200 words.\
-    Refer to research on the portfolio {portfolio_research} for more context'
+    on how this would be affect the risk rating of the stock portfolio {portfolio}. \
+    Be as technical as possible, and keep your response below 200 words. \
+    Refer to research on the portfolio {portfolio_research} for more context.'
 )
 
 
@@ -40,7 +40,7 @@ title_memory = ConversationBufferMemory(input_key='raw_input', memory_key='chat_
 script_memory = ConversationBufferMemory(input_key='wikipedia_research', memory_key='chat_history')
 
 # Llms
-llm = OpenAI(temperature=0.9) 
+llm = OpenAI(temperature=0.8, presence_penalty=0.2, frequency_penalty= 0.2, max_tokens=1000) 
 input_chain = LLMChain(llm=llm, prompt=input_template, verbose=True, output_key='input_chain_output')
 output_chain = LLMChain(llm=llm, prompt=script_template, verbose=True, output_key='output_chain_output')
 
