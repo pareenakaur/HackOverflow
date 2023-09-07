@@ -1,10 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Row, Col, Card, CardHeader, CardBody, Button } from "shards-react";
-
-import RangeDatePicker from "../common/RangeDatePicker";
-import Chart from "../../utils/chart";
-
 import { createChart, CrosshairMode } from "lightweight-charts";
 import { useEffect, useRef } from "react";
 

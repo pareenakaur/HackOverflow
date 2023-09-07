@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Row, Col, Card, CardHeader, CardBody, Button } from "shards-react";
+import { Row, Col, FormSelect, Card, CardHeader, CardBody, Button, CardFooter } from "shards-react";
+
 
 import RangeDatePicker from "../common/RangeDatePicker";
 import Chart from "../../utils/chart";
@@ -97,13 +98,21 @@ class UsersOverview extends React.Component {
             <Col sm="6" className="d-flex mb-2 mb-sm-0">
               <RangeDatePicker />
             </Col>
-            <Col>
-              <Button
+
+            <Col style={{
+              textAlign: "right"
+            }}>
+              <FormSelect
                 size="sm"
-                className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+                value="last-week"
+                style={{ maxWidth: "130px" }}
+                onChange={() => { }}
               >
-                View Full Report &rarr;
-              </Button>
+                <option value="last-week">Last Week</option>
+                <option value="today">Today</option>
+                <option value="last-month">Last Month</option>
+                <option value="last-year">Last Year</option>
+              </FormSelect>
             </Col>
           </Row>
           <canvas
@@ -111,6 +120,19 @@ class UsersOverview extends React.Component {
             ref={this.canvasRef}
             style={{ maxWidth: "100% !important" }}
           />
+          <Row>
+            <Col >
+
+              <Button
+                size="sm"
+                className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+              >
+                View Full Report &rarr;
+              </Button>
+            </Col>
+
+          </Row>
+
         </CardBody>
       </Card>
     );
@@ -133,7 +155,7 @@ UsersOverview.propTypes = {
 };
 
 UsersOverview.defaultProps = {
-  title: "Users Overview",
+  title: "Portfolio Performance",
   chartData: {
     labels: Array.from(new Array(30), (_, i) => (i === 0 ? 1 : i)),
     datasets: [
@@ -169,8 +191,8 @@ UsersOverview.defaultProps = {
           3200,
           3400,
           2910,
-          3100,
-          4250
+          2500,
+          2200
         ],
         backgroundColor: "rgba(0,123,255,0.1)",
         borderColor: "rgba(0,123,255,1)",
@@ -184,15 +206,15 @@ UsersOverview.defaultProps = {
         label: "Past Month",
         fill: "start",
         data: [
-          380,
+          500,
           430,
-          120,
-          230,
-          410,
           740,
-          472,
-          219,
-          391,
+          900,
+          600,
+          840,
+          820,
+          590,
+          491,
           229,
           400,
           203,
