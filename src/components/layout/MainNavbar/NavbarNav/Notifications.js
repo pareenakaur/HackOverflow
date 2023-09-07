@@ -6,19 +6,19 @@ export default class Notifications extends React.Component {
     super(props);
 
     this.state = {
-      visible: false
+      notificationsVisible: false,
     };
-
-    this.toggleNotifications = this.toggleNotifications.bind(this);
   }
 
-  toggleNotifications() {
-    this.setState({
-      visible: !this.state.visible
-    });
-  }
+  toggleNotifications = () => {
+    this.setState((prevState) => ({
+      notificationsVisible: !prevState.notificationsVisible,
+    }));
+  };
 
   render() {
+    const { notificationsVisible } = this.state;
+
     return (
       <NavItem className="border-right dropdown notifications">
         <NavLink
@@ -27,13 +27,15 @@ export default class Notifications extends React.Component {
         >
           <div className="nav-link-icon__wrapper">
             <i className="material-icons">&#xE7F4;</i>
-            <Badge pill theme="danger">
-              2
-            </Badge>
           </div>
         </NavLink>
+        {notificationsVisible && (
+          <Badge pill theme="danger">
+            2
+          </Badge>
+        )}
         <Collapse
-          open={this.state.visible}
+          open={notificationsVisible}
           className="dropdown-menu dropdown-menu-small"
         >
           <DropdownItem>
@@ -43,11 +45,12 @@ export default class Notifications extends React.Component {
               </div>
             </div>
             <div className="notification__content">
-              <span className="notification__category">Analytics</span>
+              <span className="notification__category">
+                Qualcomm's AI Boost Comes with Risks
+              </span>
               <p>
-                Your website’s active users count increased by{" "}
-                <span className="text-success text-semibold">28%</span> in the
-                last week. Great job!
+                Consider diversification or set stop-loss orders to mitigate
+                potential losses.
               </p>
             </div>
           </DropdownItem>
@@ -58,16 +61,18 @@ export default class Notifications extends React.Component {
               </div>
             </div>
             <div className="notification__content">
-              <span className="notification__category">Sales</span>
+              <span className="notification__category">
+                Lululemon Reports Strong Growth in China, Raises Guidance
+              </span>
               <p>
-                Last week your store’s sales count decreased by{" "}
-                <span className="text-danger text-semibold">5.52%</span>. It
-                could have been worse!
+                Lululemon expects higher sales and profits. Consider monitoring
+                its expansion in China and growth strategy for potential
+                investment opportunities.
               </p>
             </div>
           </DropdownItem>
           <DropdownItem className="notification__all text-center">
-            View all Notifications
+            View all Alerts
           </DropdownItem>
         </Collapse>
       </NavItem>
