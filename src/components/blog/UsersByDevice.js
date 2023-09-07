@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {
   Row,
+  Button,
   Col,
   FormSelect,
   Card,
@@ -76,9 +77,17 @@ class UsersByDevice extends React.Component {
               </FormSelect>
             </Col>
             <Col className="text-right view-report">
-              {/* eslint-disable-next-line */}
-              <a href="#">View full report &rarr;</a>
+
+              <Button
+                size="sm"
+                className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+              >
+                View Full Report &rarr;
+              </Button>
             </Col>
+
+
+            
           </Row>
         </CardFooter>
       </Card>
