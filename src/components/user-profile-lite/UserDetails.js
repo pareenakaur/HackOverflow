@@ -22,12 +22,12 @@ const UserDetails = ({ userDetails }) => (
       </div>
       <h4 className="mb-0">{userDetails.name}</h4>
       <span className="text-muted d-block mb-2">{userDetails.jobTitle}</span>
-      <Button pill outline size="sm" className="mb-2">
+      {/*<Button pill outline size="sm" className="mb-2">
         <i className="material-icons mr-1">person_add</i> Follow
-      </Button>
+</Button>*/}
     </CardHeader>
     <ListGroup flush>
-      <ListGroupItem className="px-4">
+      {/*<ListGroupItem className="px-4">
         <div className="progress-wrapper">
           <strong className="text-muted d-block mb-2">
             {userDetails.performanceReportTitle}
@@ -41,7 +41,7 @@ const UserDetails = ({ userDetails }) => (
             </span>
           </Progress>
         </div>
-      </ListGroupItem>
+</ListGroupItem>*/}
       <ListGroupItem className="p-4">
         <strong className="text-muted d-block mb-2">
           {userDetails.metaTitle}
@@ -61,14 +61,12 @@ UserDetails.propTypes = {
 
 UserDetails.defaultProps = {
   userDetails: {
-    name: "Sierra Brooks",
-    avatar: require("./../../images/avatars/0.jpg"),
-    jobTitle: "Project Manager",
-    performanceReportTitle: "Workload",
-    performanceReportValue: 74,
-    metaTitle: "Description",
+    name: "Brendan Carney",
+    avatar: require("./../../images/avatars/citi_av.png"),
+    jobTitle: "Chief Executive Officer",
+    metaTitle: "About Me",
     metaValue:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque, quidem, commodi soluta qui quae minima obcaecati quod dolorum sint alias, possimus illum assumenda eligendi cumque?"
+      "Banking executive with a strong track record of transformational leadership."
   }
 };
 
