@@ -20,6 +20,25 @@ class UsersByDevice extends React.Component {
     this.canvasRef = React.createRef();
   }
 
+  // Add a function to handle the download of the PDF
+  handleDownloadPdf = () => {
+    // Replace 'example.com/your-pdf-url' with the actual URL of the PDF you want to download
+    const pdfUrl = "https://www.citigroup.com/rcs/citigpa/storage/public/2Q23-earnings-presentation.pdf";
+
+    // Create a hidden anchor element to trigger the download
+    const anchor = document.createElement("a");
+    anchor.style.display = "none";
+    anchor.href = pdfUrl;
+    anchor.target = "_blank"; // Open in a new tab
+    anchor.download = "report.pdf"; // Specify the desired file name
+
+    // Trigger a click event on the anchor to start the download
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  };
+
+
   componentDidMount() {
     const chartConfig = {
       type: "pie",
@@ -81,6 +100,7 @@ class UsersByDevice extends React.Component {
               <Button
                 size="sm"
                 className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+                onClick={this.handleDownloadPdf}
               >
                 View Full Report &rarr;
               </Button>
