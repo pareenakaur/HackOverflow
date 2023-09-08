@@ -39,27 +39,23 @@ MainFooter.propTypes = {
 
 MainFooter.defaultProps = {
   contained: false,
-  copyright: "Copyright © 2018 DesignRevision",
+  copyright: "Copyright © 2023 TeamOptimize",
   menuItems: [
     {
-      title: "Home",
-      to: "#"
+      title: "Dashboard",
+      to: "/blog-overview"
     },
     {
-      title: "Services",
-      to: "#"
+      title: "Fin. News Insights",
+      to: "/blog-posts"
     },
     {
-      title: "About",
-      to: "#"
+      title: "ChatBot",
+      to: "/add-new-post"
     },
     {
-      title: "Products",
-      to: "#"
-    },
-    {
-      title: "Blog",
-      to: "#"
+      title: "User Profile",
+      to: "/user-profile-lite"
     }
   ]
 };
