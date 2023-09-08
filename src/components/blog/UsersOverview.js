@@ -9,8 +9,10 @@ import Chart from "../../utils/chart";
 class UsersOverview extends React.Component {
   constructor(props) {
     super(props);
-
     this.canvasRef = React.createRef();
+    this.state = {
+      chartData: this.props.chartData, // Initialize chartData in the state
+    };
   }
 
   componentDidMount() {
@@ -69,10 +71,12 @@ class UsersOverview extends React.Component {
       ...this.props.chartOptions
     };
 
+
+
     const BlogUsersOverview = new Chart(this.canvasRef.current, {
       type: "LineWithLine",
-      data: this.props.chartData,
-      options: chartOptions
+      data: this.state.chartData,
+      options: this.chartOptions
     });
 
     // They can still be triggered on hover.
@@ -85,6 +89,56 @@ class UsersOverview extends React.Component {
     // Render the chart.
     BlogUsersOverview.render();
   }
+
+  // Add a function to handle the download of the PDF
+  handleDownloadPdf = () => {
+    // Replace 'example.com/your-pdf-url' with the actual URL of the PDF you want to download
+    const pdfUrl = "f";
+
+    // Create a hidden anchor element to trigger the download
+    const anchor = document.createElement("a");
+    anchor.style.display = "none";
+    anchor.href = pdfUrl;
+    anchor.target = "_blank"; // Open in a new tab
+    anchor.download = "report.pdf"; // Specify the desired file name
+
+    // Trigger a click event on the anchor to start the download
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  };
+
+  handleFormSelectChange = (event) => {
+    const selectedValue = event.target.value;
+    let newChartData = { ...this.state.chartData }; 
+
+    if (selectedValue === "today") {
+      const newDataForDataset0 = [100,100]
+      const newDataForDataset1 = [500,500]
+
+      newChartData.datasets[0].data = newDataForDataset0
+      newChartData.datasets[1].data = newDataForDataset1
+
+      this.setState({
+        chartData: newChartData,
+      });
+      
+      const BlogUsersOverview = new Chart(this.canvasRef.current, {
+        type: "LineWithLine",
+        data: newChartData,
+        options: this.chartOptions
+      });
+
+
+      // Render the chart.
+      BlogUsersOverview.render();
+
+
+
+    }
+
+    
+  };
 
   render() {
     const { title } = this.props;
@@ -106,7 +160,7 @@ class UsersOverview extends React.Component {
                 size="sm"
                 value="last-week"
                 style={{ maxWidth: "130px" }}
-                onChange={() => { }}
+                onChange={this.handleFormSelectChange}
               >
                 <option value="last-week">Last Week</option>
                 <option value="today">Today</option>
@@ -126,6 +180,8 @@ class UsersOverview extends React.Component {
               <Button
                 size="sm"
                 className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+                onClick={this.handleDownloadPdf}
+              
               >
                 View Full Report &rarr;
               </Button>
