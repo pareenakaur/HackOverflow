@@ -32,9 +32,9 @@ const TopReferrals = ({ title, referralData }) => (
       </ListGroup>
     </CardBody>
 
-    <CardFooter className="border-top">
+    <CardFooter>
       <Row>
-        {/* Time Span */}
+        
         <Col>
           <FormSelect
             size="sm"
@@ -49,13 +49,13 @@ const TopReferrals = ({ title, referralData }) => (
           </FormSelect>
         </Col>
 
-        {/* View Full Report */}
+        
         <Col className="text-right view-report">
-          {/* eslint-disable-next-line */}
+         
           <a href="#">Full report &rarr;</a>
         </Col>
       </Row>
-    </CardFooter>
+    </CardFooter> 
   </Card>
 );
 
@@ -71,40 +71,36 @@ TopReferrals.propTypes = {
 };
 
 TopReferrals.defaultProps = {
-  title: "Top Referrals",
+  title: "Top Safe Stocks 2023",
   referralData: [
     {
-      title: "GitHub",
-      value: "19,291"
+      title: "Berkshire Hathaway",
+      value: "BRK.A 0.05%"
     },
     {
-      title: "Stack Overflow",
-      value: "11,201"
+      title: "The Walt Disney Company",
+      value: "DIS -0.51%"
     },
     {
-      title: "Hacker News",
-      value: "9,291"
+      title: "Vanguard High Dividend Yield ETF",
+      value: "VYM -0.03%"
     },
     {
-      title: "Reddit",
-      value: "8,281"
+      title: "Proctor & Gamble",
+      value: "0.95%"
     },
     {
-      title: "The Next Web",
-      value: "7,128"
+      title: "Vanguard Real Estate Index Fund",
+      value: "VNQ 0.63%"
     },
     {
-      title: "Tech Crunch",
-      value: "6,218"
+      title: "Starbucks",
+      value: "SBUX -0.89%"
     },
     {
-      title: "YouTube",
-      value: "1,218"
+      title: "Apple",
+      value: "AAPL -2.92%"
     },
-    {
-      title: "Adobe",
-      value: "1,171"
-    }
   ]
 };
 
