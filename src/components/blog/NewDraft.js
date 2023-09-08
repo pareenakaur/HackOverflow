@@ -22,12 +22,12 @@ const NewDraft = ({ title }) => (
       <Form className="quick-post-form">
         {/* Title */}
         <FormGroup>
-          <FormInput placeholder="Brave New World" />
+          <FormInput placeholder="Risk Discussion Title Post" />
         </FormGroup>
 
         {/* Body */}
         <FormGroup>
-          <FormTextarea placeholder="Words can be like X-rays if you use them properly..." />
+          <FormTextarea placeholder="Add in your insightful insights on your profolio equities..." />
         </FormGroup>
 
         {/* Create Draft */}
@@ -49,7 +49,7 @@ NewDraft.propTypes = {
 };
 
 NewDraft.defaultProps = {
-  title: "New Draft"
+  title: "New Risk Discussion Draft"
 };
 
 export default NewDraft;

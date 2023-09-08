@@ -80,7 +80,7 @@ class UsersByDevice extends React.Component {
             className="blog-users-by-device m-auto"
           />
         </CardBody>
-        {/*<CardFooter className="border-top">
+        <CardFooter className="border-top">
           <Row>
             <Col>
               <FormSelect
@@ -109,7 +109,7 @@ class UsersByDevice extends React.Component {
 
             
           </Row>
-    </CardFooter>*/}
+    </CardFooter>
       </Card>
     );
   }

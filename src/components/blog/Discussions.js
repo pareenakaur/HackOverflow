@@ -11,6 +11,23 @@ import {
   Col
 } from "shards-react";
 
+// Add a function to handle the download of the PDF
+const handleDownloadPdf = () => {
+  // Replace 'example.com/your-pdf-url' with the actual URL of the PDF you want to download
+  const pdfUrl = "https://in.investing.com/analysis/top-trade-ideas-for-the-week-200444331"
+  // Create a hidden anchor element to trigger the download
+  const anchor = document.createElement("a");
+  anchor.style.display = "none";
+  anchor.href = pdfUrl;
+  anchor.target = "_blank"; // Open in a new tab
+  anchor.download = "report.pdf"; // Specify the desired file name
+
+  // Trigger a click event on the anchor to start the download
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+};
+
 const Discussions = ({ title, discussions }) => (
   <Card small className="blog-comments">
     <CardHeader className="border-bottom">
@@ -49,19 +66,19 @@ const Discussions = ({ title, discussions }) => (
                   <span className="text-success">
                     <i className="material-icons">check</i>
                   </span>{" "}
-                  Approve
+                  Upvote
                 </Button>
                 <Button theme="white">
                   <span className="text-danger">
                     <i className="material-icons">clear</i>
                   </span>{" "}
-                  Reject
+                  Downvote
                 </Button>
                 <Button theme="white">
                   <span className="text-light">
                     <i className="material-icons">more_vert</i>
                   </span>{" "}
-                  Edit
+                  Reply
                 </Button>
               </ButtonGroup>
             </div>
@@ -73,7 +90,7 @@ const Discussions = ({ title, discussions }) => (
     <CardFooter className="border-top">
       <Row>
         <Col className="text-center view-report">
-          <Button theme="white" type="submit">
+          <Button theme="white" type="submit" onClick={handleDownloadPdf}> 
             View All Comments
           </Button>
         </Col>
@@ -94,49 +111,49 @@ Discussions.propTypes = {
 };
 
 Discussions.defaultProps = {
-  title: "Discussions",
+  title: "(🔴 Live) Company Equity-Risk Discussions",
   discussions: [
     {
       id: 1,
-      date: "3 days ago",
+      date: "2 days ago",
       author: {
-        image: require("../../images/avatars/1.jpg"),
-        name: "John Doe",
-        url: "#"
+        image: require("../../images/avatars/citi_employee_img.jpg"),
+        name: "Mork (Citi Trader)",
+        url: "https://www.linkedin.com/in/mark-zuckerberg-618bba58/"
       },
       post: {
-        title: "Hello World!",
-        url: "#"
+        title: "GOLD ($XAU) potential SHORT RISK!!",
+        url: "https://www.tradingview.com/chart/XAUUSD/jrpzRM6Z-Gold-price-analysis-today-will-gold-drop-to-1900/"
       },
-      body: "Well, the way they make shows is, they make one show ..."
+      body: "We can observe that the strength of the US dollar and bond yields are major factors putting significant pressure on gold, causing it to decline and reach its lowest point in the past week...."
     },
     {
       id: 2,
-      date: "4 days ago",
+      date: "3 days ago",
       author: {
-        image: require("../../images/avatars/2.jpg"),
-        name: "John Doe",
-        url: "#"
+        image: require("../../images/avatars/citi_country_officer.avif"),
+        name: "Tibor Pandi (Citi CO)",
+        url: "https://www.linkedin.com/in/tibor-p%C3%A1ndi-18536/?originalSubdomain=sg"
       },
       post: {
-        title: "Hello World!",
-        url: "#"
+        title: "USD/CHF - Upside Momentum FX Trade Idea",
+        url: "https://www.tradingview.com/chart/USDCHF/YeUoj0Rg-USD-CHF-Gains-Momentum-Amid-Positive-US-Data-and-Trade-Dev/"
       },
-      body: "After the avalanche, it took us a week to climb out. Now..."
+      body: "USD/CHF pair continues its ascent, trading in positive territory for the third consecutive day. A combination of factors, including encouraging US economic data and an extension of tariff exemptions in US-China trade relations, has contributed to the pair's recent momentum. I..."
     },
     {
       id: 3,
       date: "5 days ago",
       author: {
-        image: require("../../images/avatars/3.jpg"),
-        name: "John Doe",
-        url: "#"
+        image: require("../../images/avatars/adam_raham_img.jpg"),
+        name: "Adam Rahman (Citi CA)",
+        url: "https://www.linkedin.com/in/adam-rahman-5688289a?originalSubdomain=sg"
       },
       post: {
-        title: "Hello World!",
-        url: "#"
+        title: "SHORT APPLE ($AAPL) Huge Market Risk",
+        url: "https://www.tradingview.com/chart/AAPL/AhPAxW9s-APPLE-SHORT-NOW/"
       },
-      body: "My money's in that office, right? If she start giving me..."
+      body: "Disappointing earning resulted in Apple finally getting that retracement that's been long awaited and finally breaking a 210 day bullish demand line. Now there are three options to consider...."
     }
   ]
 };
