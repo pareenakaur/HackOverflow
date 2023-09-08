@@ -54,10 +54,6 @@ MainFooter.defaultProps = {
       to: "/add-new-post"
     },
     {
-      title: "Products",
-      to: "#"
-    },
-    {
       title: "User Profile",
       to: "/user-profile-lite"
     }
