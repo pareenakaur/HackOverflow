@@ -9,8 +9,27 @@ import {
   CardFooter,
   Row,
   Col,
-  FormSelect
+  FormSelect, Button
 } from "shards-react";
+
+// Add a function to handle the download of the PDF
+const handleDownloadPdf = () => {
+  // Replace 'example.com/your-pdf-url' with the actual URL of the PDF you want to download
+  const pdfUrl = "https://business.unl.edu/outreach/econ-ed/nebraska-council-on-economic-education/student-programs/stock-market-game/documents/Top%202000%20Valued%20Companies%20with%20Ticker%20Symbols.pdf";
+
+  // Create a hidden anchor element to trigger the download
+  const anchor = document.createElement("a");
+  anchor.style.display = "none";
+  anchor.href = pdfUrl;
+  anchor.target = "_blank"; // Open in a new tab
+  anchor.download = "report.pdf"; // Specify the desired file name
+
+  // Trigger a click event on the anchor to start the download
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+};
+
 
 const TopReferrals = ({ title, referralData }) => (
   <Card small>
@@ -51,13 +70,19 @@ const TopReferrals = ({ title, referralData }) => (
 
         
         <Col className="text-right view-report">
-         
-          <a href="#">Full report &rarr;</a>
+          <Button
+            size="sm"
+            className="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+            onClick={handleDownloadPdf}
+          >
+            View Full Report &rarr;
+          </Button>
         </Col>
       </Row>
     </CardFooter> 
   </Card>
 );
+
 
 TopReferrals.propTypes = {
   /**
