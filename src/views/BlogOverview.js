@@ -78,8 +78,8 @@ BlogOverview.defaultProps = {
   smallStats: [
     {
       label: "Current Value",
-      value: "4,496.83",
-      percentage: "1.45%",
+      value: "$4,496.83",
+      percentage: "+2.45%",
       increase: true,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
@@ -98,7 +98,8 @@ BlogOverview.defaultProps = {
       label: "Risk Assement",
       value: "23%",
       percentage: "3.4%",
-      increase: true,
+      increase: false,
+      decrease: true,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
       datasets: [
@@ -106,18 +107,18 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(23,198,113,0.1)",
-          borderColor: "rgb(23,198,113)",
+          backgroundColor: "rgba(255,180,0,0.1)",
+          borderColor: "rgb(255,180,0)",
           data: [1, 2, 3, 3, 3, 4, 4]
         }
       ]
     },
     {
-      label: "Comments",
-      value: "8,147",
-      percentage: "3.8%",
-      increase: false,
-      decrease: true,
+      label: "Current AUM",
+      value: "$8.14Bil",
+      percentage: "+3.8%",
+      increase: true,
+      decrease: false,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "4", sm: "6" },
       datasets: [
@@ -125,16 +126,16 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(255,180,0,0.1)",
-          borderColor: "rgb(255,180,0)",
+          backgroundColor: "rgba(0, 184, 216, 0.1)",
+          borderColor: "rgb(0, 184, 216)",
           data: [2, 3, 3, 3, 4, 3, 3]
         }
       ]
     },
     {
-      label: "New Customers",
-      value: "29",
-      percentage: "2.71%",
+      label: "Riskiest Performer",
+      value: "$NVDA",
+      percentage: "-1.74%",
       increase: false,
       decrease: true,
       chartLabels: [null, null, null, null, null, null, null],
@@ -146,15 +147,15 @@ BlogOverview.defaultProps = {
           borderWidth: 1.5,
           backgroundColor: "rgba(255,65,105,0.1)",
           borderColor: "rgb(255,65,105)",
-          data: [1, 7, 1, 3, 1, 4, 8]
+          data: [5, 4, 2, 5, 1, 3, 1]
         }
       ]
     },
     {
-      label: "Subscribers",
-      value: "17,281",
-      percentage: "2.4%",
-      increase: false,
+      label: "Strongest Performer",
+      value: "$AMZN",
+      percentage: "+3.84%",
+      increase: true,
       decrease: true,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "4", sm: "6" },
@@ -165,7 +166,7 @@ BlogOverview.defaultProps = {
           borderWidth: 1.5,
           backgroundColor: "rgb(0,123,255,0.1)",
           borderColor: "rgb(0,123,255)",
-          data: [3, 2, 3, 2, 4, 5, 4]
+          data: [1, 2, 4, 2, 4, 8, 5]
         }
       ]
     }

@@ -9,7 +9,7 @@ const Chatbot = () => (
     <Card small className="mb-3">
         <CardBody>
             <iframe
-                src="https://30days.streamlit.app/?embed=true" // put link for chatbot in here (src\components\add-new-post\Chatbot.js)
+                src="https://optimizeprime.streamlit.app/" // put link for chatbot in here (src\components\add-new-post\Chatbot.js)
                 width="750" 
                 height="750"
             ></iframe>
