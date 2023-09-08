@@ -71,7 +71,7 @@ TopReferrals.propTypes = {
 };
 
 TopReferrals.defaultProps = {
-  title: "Top Safe Stocks 2023",
+  title: "Trending Low-Risk Equities",
   referralData: [
     {
       title: "Berkshire Hathaway",
