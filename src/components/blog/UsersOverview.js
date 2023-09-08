@@ -92,8 +92,7 @@ class UsersOverview extends React.Component {
 
   // Add a function to handle the download of the PDF
   handleDownloadPdf = () => {
-    // Replace 'example.com/your-pdf-url' with the actual URL of the PDF you want to download
-    const pdfUrl = "f";
+    const pdfUrl = "https://www.citigroup.com/rcs/citigpa/storage/public/2Q23-supp-web.pdf";
 
     // Create a hidden anchor element to trigger the download
     const anchor = document.createElement("a");
