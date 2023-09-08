@@ -120,15 +120,17 @@ UsersByDevice.defaultProps = {
     datasets: [
       {
         hoverBorderColor: "#ffffff",
-        data: [25.6, 12.4, 7.5, 2.5, 2 ,10.4, 13.6, 28],
+        data: [25.6, 12.4, 17.5, 24.5,20],
         backgroundColor: [
           "rgba(0,123,255,0.9)",
-          "rgba(0,123,255,0.5)",
-          "rgba(0,123,255,0.3)"
+          "rgba(0,123,255,0.9)",
+          "rgba(255,4,0,0.4)",
+          "rgba(128,128,128,0.4)",
+          "rgba(255,196,0,0.75)"
         ]
       }
     ],
-    labels: ["$NVDA", "$CCL", "$BABA", "$MO", "TLT", "BIL", "MC.PA"]
+    labels: ["$AMZN", "$CCL", "MC.PA", "TS:TLT", "REIT:VNQ"]
   }
 };
 
