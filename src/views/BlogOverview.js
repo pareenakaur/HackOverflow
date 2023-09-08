@@ -134,7 +134,7 @@ BlogOverview.defaultProps = {
     },
     {
       label: "Riskiest Performer",
-      value: "$NVDA",
+      value: "MC:PA",
       percentage: "-1.74%",
       increase: false,
       decrease: true,

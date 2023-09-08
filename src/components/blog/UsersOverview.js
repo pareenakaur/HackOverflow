@@ -113,8 +113,8 @@ class UsersOverview extends React.Component {
     let newChartData = { ...this.state.chartData }; 
 
     if (selectedValue === "today") {
-      const newDataForDataset0 = [100,100]
-      const newDataForDataset1 = [500,500]
+      const newDataForDataset0 = [4893, 4113, 4941, 4157, 4910, 3834, 3671, 2819, 4874, 3732, 3230, 3569, 3471, 2771, 4224, 1671, 1554, 1834, 1719, 604, 224, 1084, 2021, 1774, 1299, 2183, 1381, 1578, 336, 1204]
+      const newDataForDataset1 = [1288, 2063, 1697, 1392, 1220, 1795, 2354, 1832, 1373, 1897, 1292, 1001, 1857, 2200, 1568, 2717, 3084, 3190, 3735, 2635, 2978, 4115, 2717, 3423, 3266, 2766, 4221, 4313, 3632, 3296]
 
       newChartData.datasets[0].data = newDataForDataset0
       newChartData.datasets[1].data = newDataForDataset1
