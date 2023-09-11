@@ -18,4 +18,3 @@ Launches the test runner in the interactive watch mode.
 Builds the app for production to the `build` folder.
 
 
-Note: A starter template was used in this project: https://github.com/DesignRevision
